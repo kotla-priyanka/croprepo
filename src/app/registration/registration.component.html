@@ -1,0 +1,89 @@
+<div class="bg">
+  <div id="sky">
+   <div class="register">
+    <form [formGroup]="signupForm" (ngSubmit)="submitForm()">
+      <!-- <p class="error-message text-danger">{{addUserErrorMessage}}</p> -->
+
+      <!-- Username Field -->
+      <div class="mb-3">
+        <label for="uName" class="form-label"><b>Username</b></label>
+        <input type="text" formControlName="uName" id="uName" class="form-control" placeholder="Enter Username" />
+        <div *ngIf="signupForm?.get('uName')?.invalid && signupForm?.get('uName')?.touched" class="text-danger font-weight-bold">
+          Username is required.
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="mb-3">
+        <label for="uEmail" class="form-label"><b>Email</b></label>
+        <input type="email" formControlName="uEmail" id="uEmail" class="form-control" placeholder="Enter Email" />
+        <div *ngIf="signupForm?.get('uEmail')?.invalid && signupForm?.get('uEmail')?.touched" class="text-danger font-weight-bold">
+          Enter a valid email address.
+        </div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="mb-3">
+        <label for= "uPassword" class="form-label"><b>Password</b></label>
+        <input type="password" formControlName="uPassword" id="uPassword" class="form-control" placeholder="Enter Password" />
+        <div *ngIf="signupForm?.get('uPassword')?.invalid && signupForm?.get('uPassword')?.touched" class="text-danger font-weight-bold">
+          Password is required and must be at least 6 characters.
+        </div>
+      </div>
+
+      <!-- Address Fields -->
+      <div formGroupName="address">
+        <div class="mb-3">
+          <label for="street" class="form-label"><b>Street</b></label>
+          <input type="text" formControlName="street" id="street" class="form-control" placeholder="Street" />
+        </div>
+    
+        <div class="mb-3">
+          <label for="pincode" class="form-label"><b>Pincode</b></label>
+          <input type="text" formControlName="pincode" id="pincode" class="form-control" placeholder="Pincode" />
+        </div>
+    
+        <div class="mb-3">
+          <label for="city" class="form-label"><b>City</b></label>
+          <input type="text" formControlName="city" id="city" class="form-control" placeholder="City" />
+        </div>
+    
+        <div class="mb-3">
+          <label for="state" class="form-label"><b>State</b></label>
+          <input type="text" formControlName="state" id="state" class="form-control" placeholder="State" />
+        </div>
+    
+        <div class="mb-3">
+          <label for="country" class="form-label"><b>Country</b></label>
+          <input type="text" formControlName="country" id="country" class="form-control" placeholder="Country" />
+        </div>
+      </div>
+      <!-- Mobile Field -->
+      <div class="mb-3">
+        <label for="uMobile" class="form-label"><b>Mobile</b></label>
+        <input type="text" formControlName="uMobile" id="uMobile" class="form-control" placeholder="Mobile" />
+        <div *ngIf="signupForm?.get('uMobile')?.invalid && signupForm?.get('uMobile')?.touched" class="text-danger font-weight-bold">
+          Enter a valid 10-digit mobile number.
+        </div>
+      </div>
+
+      <!-- Role Field -->
+      <div class="mb-3">
+        <label for="uRole" class="form-label"><b>Role</b></label>
+        <select formControlName="uRole" id="uRole" class="form-control">
+          <option value="Farmer">Farmer</option>
+          <option value="Dealer">Dealer</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-success">Register</button>
+      </div>
+    </form>
+
+    <p>
+      Already a User? <a routerLink="/login">Click here</a> to sign in.
+    </p>
+  </div>
+  <img src="/assets/images/linegrass.png" style="height: 199px;width:100%;background-attachment: fixed;"/>
+</div>

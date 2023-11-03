@@ -1,0 +1,64 @@
+
+.error-message {
+  color: red;
+  font-style: italic;
+}
+.bg{  
+  /* background-image: url('/assets/images/registration1.png'); */
+  background-repeat: no-repeat;
+} 
+
+/* Adjusting the page background */
+.bg {
+  /* background-image: url('path_to_your_image.jpg'); Change to your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; 
+  font-family: Arial, sans-serif;
+}
+
+#sky {
+  height: 410px;
+  background-color: #cccccc;
+  background-image: linear-gradient(rgb(85, 149, 202), rgba(255, 255, 255, 0.993));
+}
+/* Styling the registration form */
+.register {
+  max-width: 500px;
+  margin: 1% auto 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the form elements */
+.register h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.register label {
+  font-weight: bold;
+  color: black;
+}
+
+.register input,
+.register select,
+.register button {
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.cancel {
+  margin-left: 10px;
+}
+.btn {
+  font-weight: bold;
+  padding: 10px 20px;  /* Adjust the padding for larger buttons */
+}

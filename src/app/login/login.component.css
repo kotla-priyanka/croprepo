@@ -1,0 +1,60 @@
+/* .Login{
+  
+  margin-left: 55%;   
+  margin-right: 5%;  
+  color: black;
+  width: 40%;
+  border: 1px solid lightgray;
+  padding: 5%;
+  border-radius: 5px;
+  box-shadow: 2px 8px 10px 10px rgb(74, 67, 67); 
+} */
+
+.Login {
+  max-width: 500px;
+  margin: 5% auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+}
+h1{
+  text-align: center;
+  color: rgb(35, 35, 36);
+}
+.bg{  
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+} 
+p{
+  color: rgb(146, 192, 232);
+}  
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+#sky {
+  height: 410px;
+  background-color: #cccccc;
+  background-image: linear-gradient(rgb(85, 149, 202), rgba(255, 255, 255, 0.993));
+}
+
+#cloud-intro{
+  position: relative;
+  height: 100%;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+    animation: wind 20s linear infinite;
+}
+
+

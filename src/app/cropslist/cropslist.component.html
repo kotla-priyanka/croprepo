@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col">
+                <mat-form-field class="full-width">
+                    <mat-label>Filter</mat-label>
+                    <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Search for crops">
+                </mat-form-field>
+            </div> -->
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 padding-1" *ngFor="let crop of crops">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <mat-card-title>{{ crop.cropName }}</mat-card-title>
+                            <mat-card-subtitle>Crop Type: {{ crop.cropType }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <!-- <p><strong>Farmer ID:</strong> {{ crop.farmerId }}</p> -->
+                            <p><strong>Crop ID:</strong> {{ crop.cropId }}</p>
+                            <p><strong>Quantity:</strong> {{ crop.quantity }}</p>
+                            <p><strong>Price:</strong> {{ crop.price }}</p>
+                            <p><strong>Location:</strong> {{ crop.location }}</p>
+                        </mat-card-content>
+                        <mat-card-actions class="btn-container">
+                            <button mat-icon-button (click)="orderCrop(crop)">
+                                <mat-icon>add_shopping_cart</mat-icon> <!-- Material Design shopping cart icon -->
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="crops.length === 0" class="row">
+            <div class="col-md-12">
+                <mat-card class="example-card">
+                    <mat-card-content class="text-center">
+                        No data matching the filter
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
